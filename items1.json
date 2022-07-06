@@ -1,0 +1,11 @@
+{
+  "description": "NFT used in SleeFi",
+  "image": "https://nft-dev.sleefi.com/v1/nft/items/1.png",
+  "name": "Items  #1",
+  "attributes": [
+    {
+      "trait_type": "Item type",
+      "value": "Pink Candy"
+    }
+  ]
+}

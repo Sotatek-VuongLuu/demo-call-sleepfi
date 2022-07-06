@@ -1,0 +1,8 @@
+{
+  "description": "NFT used in SleeFi",
+  "image": "https://nft-dev.sleefi.com/v1/nft/items/3.png",
+  "name": "Items #3",
+  "attributes": [
+    { "trait_type": "Item type", "value": "Green Candy" }
+  ]
+}

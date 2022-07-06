@@ -1,0 +1,6 @@
+{
+  "description": "NFT used in SleeFi",
+  "image": "https://nft-dev.sleefi.com/v1/nft/bedbox/1.png",
+  "name": "Bedbox #1",
+  "attributes": [{ "trait_type": "Bedbox quality", "value": "Common" }]
+}
