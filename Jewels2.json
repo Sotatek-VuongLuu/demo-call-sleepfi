@@ -1,6 +1,0 @@
-{
-  "description": "NFT used in SleeFi",
-  "image": "https://nft-dev.sleefi.com/v1/nft/jewels/2.svg",
-  "name": "Jewels #2",
-  "attributes": [{ "trait_type": "Jewels type", "value": "Sapphire" }]
-}

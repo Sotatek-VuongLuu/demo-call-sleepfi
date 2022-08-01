@@ -1,6 +1,0 @@
-{
-  "description": "NFT used in SleeFi",
-  "image": "https://nft-dev.sleefi.com/v1/nft/jewels/3.svg",
-  "name": "Jewels #3",
-  "attributes": [{ "trait_type": "Jewels type", "value": "Emerald" }]
-}
