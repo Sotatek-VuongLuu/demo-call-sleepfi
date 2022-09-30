@@ -58,7 +58,7 @@ const ATTRIBUTE_POINT_COMMON = [
 ];
 
 const ATTRIBUTE_POINT_UNCOMMON = [
-  { value: 4, percent: 30 },
+  { value: 4, percent: 27 },
   { value: 5, percent: 22 },
   { value: 6, percent: 15 },
   { value: 7, percent: 10 },
@@ -66,8 +66,16 @@ const ATTRIBUTE_POINT_UNCOMMON = [
   { value: 9, percent: 6 },
   { value: 10, percent: 4 },
   { value: 11, percent: 3 },
-  { value: 12, percent: 2 },
+  { value: 12, percent: 5 },
 ];
+
+const ATTRIBUTE_POINT_LINNHPHUNG = [
+  { value: 1, percent: 5 },
+  { value: 2, percent: 12 },
+  { value: 3, percent: 15},
+  { value: 4, percent: 20 },
+  { value: 5, percent: 5 },
+]
 const BED_RARE_QUALITY_PERCENT = [
   { value: 20, percent: 4 },
   { value: 21, percent: 4 },
@@ -342,7 +350,9 @@ const getRandomWithPercent = async (arr) => {
   const n = arr.length;
   const prob_value = [];
   const prob_find = [];
+  let total = 0;
   arr.map((e, i) => {
+    total = total + e.percent;
     if (i == 0) {
       prob_value[0] = e.value;
       prob_find[0] = e.percent;
@@ -351,7 +361,8 @@ const getRandomWithPercent = async (arr) => {
     prob_value[i] = e.value;
     prob_find[i] = prob_find[i - 1] + e.percent;
   });
-  const r = Math.random() * 100;
+  const r = Math.random() * total;
+  console.log("random: ", r);
   let start = 0;
   let end = n - 1;
   while (end > start) {
@@ -365,14 +376,14 @@ const getRandomWithPercent = async (arr) => {
 const randome = async (number) => {
   let sum = 0;
   for (let i = 0; i < number; i++) {
-    let rl = await getRandomWithPercent(ATTRIBUTE_POINT_UNCOMMON);
+    let rl = await getRandomWithPercent(ATTRIBUTE_POINT_LINNHPHUNG);
     // if (rl == 30) { console.log("30")}
     sum += rl;
   }
   console.log("sum:", sum);
   console.log("avg: ", sum / number);
 };
-// randome(1000000);
+randome(100);
 const testPadStart = async (number) => {
   // let a = (String(Number(number)).padStart(5, "0"))
   // console.log("a: ", a);
@@ -418,17 +429,3 @@ const genatare = async () => {
   }
 };
 // genatare();
-
-const hehe = async () => {
-  let e = await hihi();
-  console.log("e: ", e);
-}
-
-const hihi =async () => {
-  const a = {
-    a: 1,
-    b: 2
-  };
-  return !!a;
-}
-hehe()
