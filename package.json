@@ -19,6 +19,7 @@
     "crypto-js": "^4.1.1",
     "ethereumjs-tx": "^2.1.2",
     "ethers": "^5.5.3",
+    "fs": "^0.0.1-security",
     "ioredis": "^5.2.3",
     "keccak": "^3.0.2",
     "keccak256": "^1.0.6",

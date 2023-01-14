@@ -72,10 +72,10 @@ const ATTRIBUTE_POINT_UNCOMMON = [
 const ATTRIBUTE_POINT_LINNHPHUNG = [
   { value: 1, percent: 5 },
   { value: 2, percent: 12 },
-  { value: 3, percent: 15},
+  { value: 3, percent: 15 },
   { value: 4, percent: 20 },
   { value: 5, percent: 5 },
-]
+];
 const BED_RARE_QUALITY_PERCENT = [
   { value: 20, percent: 4 },
   { value: 21, percent: 4 },
@@ -340,12 +340,75 @@ const BED_LENGENDARY_QUALITY_PERCENT = [
   { value: 199, percent: 0.6 },
   { value: 200, percent: 0.6 },
 ];
+const vuog = [
+  { value: 50, percent: 1 } ,
+  { value: 51, percent: 1 } ,
+  { value: 52, percent: 1 } ,
+  { value: 53, percent: 1 } ,
+  { value: 54, percent: 1 } ,
+  { value: 55, percent: 1 } ,
+  { value: 56, percent: 1 } ,
+  { value: 57, percent: 1 } ,
+  { value: 58, percent: 1 } ,
+  { value: 59, percent: 1 } ,
+  { value: 60, percent: 1 } ,
+  { value: 61, percent: 1 } ,
+  { value: 62, percent: 1 } ,
+  { value: 63, percent: 1 } ,
+  { value: 64, percent: 1 } ,
+  { value: 65, percent: 1 } ,
+  { value: 66, percent: 1 } ,
+  { value: 67, percent: 1 } ,
+  { value: 68, percent: 1 } ,
+  { value: 69, percent: 1 } ,
+  { value: 70, percent: 1 } ,
+  { value: 71, percent: 1 } ,
+  { value: 72, percent: 2 } ,
+  { value: 73, percent: 2 } ,
+  { value: 74, percent: 2 } ,
+  { value: 75, percent: 2 } ,
+  { value: 76, percent: 2 } ,
+  { value: 77, percent: 2 } ,
+  { value: 78, percent: 2 } ,
+  { value: 79, percent: 2 } ,
+  { value: 80, percent: 2 } ,
+  { value: 81, percent: 2 } ,
+  { value: 82, percent: 2 } ,
+  { value: 83, percent: 2 } ,
+  { value: 84, percent: 2 } ,
+  { value: 85, percent: 2 } ,
+  { value: 86, percent: 2 } ,
+  { value: 87, percent: 2 } ,
+  { value: 88, percent: 2 } ,
+  { value: 89, percent: 2 } ,
+  { value: 90, percent: 2 } ,
+  { value: 91, percent: 2 } ,
+  { value: 92, percent: 2 } ,
+  { value: 93, percent: 2 } ,
+  { value: 94, percent: 2 } ,
+  { value: 95, percent: 2 } ,
+  { value: 96, percent: 2 } ,
+  { value: 97, percent: 2 } ,
+  { value: 98, percent: 2 } ,
+  { value: 99, percent: 2 } ,
+  { value: 100, percent: 2 } ,
+  { value: 101, percent: 2 } ,
+  { value: 102, percent: 2 } ,
+  { value: 103, percent: 2 } ,
+  { value: 104, percent: 2 } ,
+  { value: 105, percent: 2 } ,
+  { value: 106, percent: 2 } ,
+  { value: 107, percent: 2 } ,
+  { value: 108, percent: 2 } ,
+  { value: 109, percent: 2 } ,
+  { value: 110, percent: 2 } ,
+];
 const getPersent = async () => {
   let sum = 0.0;
-  BED_LENGENDARY_QUALITY_PERCENT.forEach((e) => (sum += e.percent));
+  vuog.forEach((e) => (sum += e.percent));
   console.log(sum);
 };
-// getPersent();
+getPersent();
 const getRandomWithPercent = async (arr) => {
   const n = arr.length;
   const prob_value = [];
@@ -383,7 +446,7 @@ const randome = async (number) => {
   console.log("sum:", sum);
   console.log("avg: ", sum / number);
 };
-randome(100);
+// randome(100);
 const testPadStart = async (number) => {
   // let a = (String(Number(number)).padStart(5, "0"))
   // console.log("a: ", a);
@@ -408,8 +471,8 @@ const testDiv = async (number, numberUncommon) => {
 };
 // testDiv(3, 1)
 const a = async () => {
-  for (let i = 1; i <= 151; i++) {
-    if (0.7 * i + 0.6 * (151 - i) == 100) {
+  for (let i = 1; i <= 61; i++) {
+    if (1 * i + 2 * (61 - i) == 100) {
       console.log(i);
     }
   }
@@ -417,13 +480,13 @@ const a = async () => {
 // a();
 const genatare = async () => {
   let count = 0;
-  for (let i = 50; i <= 200; i++) {
+  for (let i = 50; i <= 110; i++) {
     count++;
-    if (count <= 94) {
-      let a = { value: i, percent: 0.7 };
+    if (count <= 22) {
+      let a = { value: i, percent: 1 };
       console.log(a, ",");
     } else {
-      let a = { value: i, percent: 0.6 };
+      let a = { value: i, percent: 2 };
       console.log(a, ",");
     }
   }
